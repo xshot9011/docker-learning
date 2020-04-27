@@ -1,0 +1,13 @@
+# step
+# 1. specify a base image
+# instruction telling docker server what to do something on the image we are going to create
+# specific docker image that we want to use as a base
+FROM alpine  
+
+# 2. run commands to install program
+# to run command while we are preparing custom image
+RUN apk add --update redis
+
+# 3. specific a command to run on container's startup
+# command that execute when startup an new container
+CMD ["redis-server"]
