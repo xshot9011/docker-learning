@@ -12,10 +12,18 @@ create DockerFild, configuration {how container behave, what's inside, what it d
 3. specific a command to run on container startup
 
 ```bash
-cd [directory that contain DockerFile]
-docker buid .
-docker run [container's id]
+docker buid [path or . if in current directory] 
+# got image
+docker run [image's id]
 ```
+
+### tag the image
+
+```bash
+docker buid -t [your docker id]/[project name]:[version] [path or . if in current directory]
+```
+
+note: can leave version blank
 
 ## run container
 
