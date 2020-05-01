@@ -6,13 +6,20 @@
 # FROM [image]:[tag]
 FROM node:alpine
 
+WORKDIR /usr/app
+
 # install some dependencies
 # # # RUN npm install
 # error "no such file or directory, open '/package.json"
 # because in the it is the diff part of hardware secment
 # use COPY [local(relatively)] [inside container]
-COPY ./ ./
+COPY ./package.json ./
 RUN npm install
+# install new depencies all the time we rebuild the image
+COPY ./ ./
+# minimizing cahe busting and rebuild
 
 # Default command
 CMD ["npm", "start"]
+
+# you need to do port mapping for making it work
