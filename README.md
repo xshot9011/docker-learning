@@ -32,6 +32,25 @@ docker run [image] [override command]
 ```
 create the container and run the default command form image
 
+### container port mapping
+
+container has it own isolate set of network port{ex. 8000 8001 8002}
+computer has it own network port too, so no incoming packages coming to localhost will redirect to the container
+container can go to outside world, but the 0outside world (incoming packet) not found the container
+
+```bash
+docker run -p [incoming port request]:[port inside the container] [image's id]
+```
+
+### specifying working directory
+
+```bash
+WORKDIR [path ex(/usr/app/)]
+```
+note: put it in DockerFile
+
+to specific the start working directory, every command will start here
+
 ### create the container
 
 ```bash
@@ -100,6 +119,8 @@ docker exec -it [container's id] [command]
 -t nice output format
 
 ### get the shell inside the container
+
+to run the second process
 
 ```bash
 docker exec -it [container's id] sh
