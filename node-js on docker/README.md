@@ -13,6 +13,8 @@
 
 follow this [link](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
 
+no need just want you to know, caz we install it in image
+
 ### install dependencies
 
 before running the application
@@ -27,3 +29,5 @@ npm install
 npm start
 ```
 
+## docker hub
+[link](https://hub.docker.com/)
