@@ -92,6 +92,8 @@ send kill signal >> shut the container down nowwww
 2 optino > docker cli's network feature (not recommended)
          > docker compose (recommended)
 
+### start multiple containers
+
 ```bash
 docker-compose up
 # equal
@@ -106,6 +108,14 @@ docker run [image]
 ```
 
 to startup container again and try to rebuild it
+
+### stop multiple containers
+
+notice: docker-compose up >> opposite is down 
+
+```bash
+docker-compose down
+```
 
 ## read log
 
