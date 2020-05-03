@@ -117,6 +117,15 @@ notice: docker-compose up >> opposite is down
 docker-compose down
 ```
 
+### get container status
+
+```bash
+# in that directory
+docker-compose ps
+```
+
+find all running containers on your local machine that belong espescially to this docker-compose file
+
 ## read log
 
 ```bash
