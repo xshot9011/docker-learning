@@ -1,0 +1,20 @@
+# new special syntax in yml file
+
+# specify the version of docker compose we are going to use
+version: '3'
+
+# here want we want docker to do in concept readme.md
+
+# a type of container
+services:
+  redis-server:
+  # this one is call "redis server"
+    image: 'redis'
+    # use redis image to create the first container
+  node-app:
+    build: .
+    # look in the path for a DockerFile an build as image for the second container
+    ports:
+      - "8081:8081"
+    # - is specify the array in yml
+    # "local port:container port"

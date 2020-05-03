@@ -87,6 +87,26 @@ docker kill [container's id]
 ```
 send kill signal >> shut the container down nowwww
 
+## muliple local container
+
+2 optino > docker cli's network feature (not recommended)
+         > docker compose (recommended)
+
+```bash
+docker-compose up
+# equal
+docker run [image]
+```
+
+```bash
+docker-compose up --build
+# equal
+docker build . 
+docker run [image]
+```
+
+to startup container again and try to rebuild it
+
 ## read log
 
 ```bash
