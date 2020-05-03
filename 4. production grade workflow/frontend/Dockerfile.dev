@@ -1,0 +1,16 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+COPY . .
+
+CMD ["npm", "run", "start"]
+
+# we we just install create-react tool, to generate new project
+# node_modules has a ton of dependencies inside of it
+# this file has a very large size
+# but we want to have only dependencies in our image 
+# so delete the node_modules folder 
+# and run it again you will see it's faster than the old
