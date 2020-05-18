@@ -5,6 +5,8 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 COPY . .
+# leave it like this, if you use docker-compose and map the folder
+# when making real product you wont use mapping folder so no need to remove this line
 
 CMD ["npm", "run", "start"]
 
