@@ -75,6 +75,25 @@ docker run [option] [image] [command]
 
 execute the startup command and show you all the log with all the information coming out the container (opposite of docker start)
 
+### docker volume (folder mapping)
+
+```bash
+docker run -p[port outside]:[port inside] -v [folder inside container] -v [folder outside directory]:[folder inside container] [image id]
+```
+
+first v:
+we ref to node_models on local machine but we already delete it
+notice: no ":" sign ==> map something outside and inside
+so no ":" mean we want use this folder inside the container dont map it up to anything
+
+second v:
+$(pwd) = get the present working directory 
+:/app = and map it to /app folder in container
+
+noet: depend on folder and work
+
+ex. docker run -p[port outside]:[port inside] -v /app/node_modules -v $(pwd):/app [image id]
+
 ## stop the container
 
 ```bash

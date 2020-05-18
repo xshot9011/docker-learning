@@ -40,3 +40,20 @@ npm run test
 ```bash
 npm run build
 ```
+
+## updating code to docker real time
+
+once you update code in your local machine, absolutely nothing make change in container 
+in order to get the update, we are going to do straig copy
+we need to adjust docker run command that we used it to run the container
+called "volume"
+
+concept::
+in container base file will reference to local machine so any change we made it will update in container too
+
+like container port mapping concept::
+map the port inside the container to port outside the container
+==
+map the folder inside the container to folder outside the container
+
+go to readme.md in root folder and find docker volume
