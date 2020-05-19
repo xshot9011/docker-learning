@@ -94,6 +94,12 @@ noet: depend on folder and work
 
 ex. docker run -p[port outside]:[port inside] -v /app/node_modules -v $(pwd):/app [image id]
 
+## sending command to container (docker attach)
+
+```bash
+docker attach [container's id]
+```
+
 ## stop the container
 
 ```bash

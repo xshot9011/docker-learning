@@ -53,7 +53,22 @@ in container base file will reference to local machine so any change we made it 
 
 like container port mapping concept::
 map the port inside the container to port outside the container
-==
+equal to
 map the folder inside the container to folder outside the container
 
 go to readme.md in root folder and find docker volume
+
+## shortcut to your container
+
+some kind of process need only short cut to work for ex react npm run test
+after we have done live updating, we will use something call docker attach
+
+go to roor readme.md to find more syntax
+
+concept:
+there are many processes running in the container, so when you send some command it will go to stdin of the primary process
+absolutely not the process that we want, the web server is another process running on that container 
+
+in this case:
+npm make another process for "run test" >> so when outside conatiner command com it will blow to "npm" process
+npm doesn't know what the heck is "your command"
