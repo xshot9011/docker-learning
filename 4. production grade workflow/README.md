@@ -74,3 +74,32 @@ npm make another process for "run test" >> so when outside conatiner command com
 npm doesn't know what the heck is "your command"
 
 still not working for this version....... just for learning the concept
+
+# travis.yml
+
+contain: command to tell travis what we want to do
+
+step:
+1. tell travis we need a copy of docker running
+>> services: 
+2. build our image using Dockerfile.dev
+>> before_install:
+3. tell travis how to run our test suite
+>> script:
+>>>> each command need to exist after running
+4. tell travis how to deploy our code to some server(aws)
+
+# aws
+
+note: i dont have credit card so I will write down some infomation to do it.
+
+to deploy our project we have to use serviec called "elastic beanstalk" >> "create new application"
+
+to deploy we have to create somthing call environment >> select web server 
+>> platform docker, sample appication >> wait for running lol
+
+elastic beanstalk create load balancer, managing request
+
+elastic has it own url (web) >> that we will replace with our application
+
+
