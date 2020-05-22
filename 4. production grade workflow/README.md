@@ -72,3 +72,5 @@ absolutely not the process that we want, the web server is another process runni
 in this case:
 npm make another process for "run test" >> so when outside conatiner command com it will blow to "npm" process
 npm doesn't know what the heck is "your command"
+
+still not working for this version....... just for learning the concept
