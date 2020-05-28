@@ -134,6 +134,31 @@ docker run [image]
 
 to startup container again and try to rebuild it
 
+```bash
+docker-compose up [service]
+```
+
+to start only one container from one service
+
+### running the second command in running container
+
+```bash
+docker-compose exec [service] [command]
+```
+
+The exec command will allow you to use a container that is already running.
+
+### start new container with new command
+
+```bash
+docker-compose run [service] [command]
+```
+
+note: The run command will spin up a new container for you to use.
+note: The exec command will allow you to use a container that is already running.
+
+being able to use run means the containers are stateless and/or configured to persist and share data appropriately using volumes
+
 ### stop multiple containers
 
 notice: docker-compose up >> opposite is down 
@@ -181,6 +206,8 @@ docker exec -it [container's id] [command]
 ```
 -i > allow to  provide input directly to the container, unless use, run command and quickly exit
 -t nice output format
+
+The exec command will allow you to use a container that is already running.
 
 ### get the shell inside the container
 
